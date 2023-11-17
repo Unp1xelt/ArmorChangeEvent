@@ -1,0 +1,5 @@
+name: ArmorChange
+version: '${project.version}'
+main: de.unpixelt.armorchange.ArmorPlugin
+authors: [Unpixelt]
+api-version: 1.16
