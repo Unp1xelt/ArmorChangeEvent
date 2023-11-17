@@ -31,7 +31,7 @@ As said before if you find bugs please report them. Thank you!
 
 ## Events
 
-All armor events of this plugin are ``cancelable``. The ``ArmorAction`` gives you info
+All armor events of this plugin are ``Cancellable``. The ``ArmorAction`` gives you info
 how the armor was equipped or unequipped. When checking in which slot the item 
 was equipped or unequipped use the ``getArmorSlot()`` method.
 
