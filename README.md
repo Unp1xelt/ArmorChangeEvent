@@ -1,7 +1,7 @@
 # ArmorChangeEvents
 
 Sadly Spigot does not have an event for checking when a Player is changing armor.
-<a href="https://github.com/Arnuh">Arnuh</a> put a good base with his <a href="https://github. com/Arnuh/ArmorEquipEvent/">project</a>, but there where still a lot of bugs. <br>
+<a href="https://github.com/Arnuh">Arnuh</a> put a good base with his <a href="https://github.com/Arnuh/ArmorEquipEvent/">project</a>, but there where still a lot of bugs. <br>
 This plugin should be bug free and working properly, but if you still find some 
 please report them. Thank you! <br>
 <br>
@@ -55,8 +55,8 @@ private void onArmorEquipEvent(ArmorEquipEvent e) {
 
 This event is called when a Player is fully unequipping an item out of the armor 
 slot. This means it will only be called when the armor slot is empty. In example,
-you custom equipped a stack of dirt on the boots slot and take half of it, it 
-will not count as an unequip event. <br>
+you custom equipped a stack (64 items) of dirt on the boots slot and take half of it, 
+it will not count as an unequip event. <br>
 <br>
 And here we remove the jump boost effect when the Player unequips iron boots.
 ```java
