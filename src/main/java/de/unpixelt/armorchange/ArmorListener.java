@@ -1,7 +1,6 @@
 package de.unpixelt.armorchange;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -15,8 +14,6 @@ import org.bukkit.event.player.PlayerItemBreakEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 import static de.unpixelt.armorchange.ArmorEvent.ArmorAction;
 
@@ -246,14 +243,6 @@ class ArmorListener implements Listener {
         for (int i = 0; i < armor.length; i++) {
             if (armor[i] == null) continue;
             callUnequip(p, armor[i], EquipmentSlot.values()[i + 2], ArmorAction.DEATH);
-        }
-    }
-
-    @EventHandler
-    private void onA(ArmorEquipEvent e) {
-        if (e.getAction() == ArmorAction.DEATH) return;
-        if (e.getItem().getType() == Material.IRON_BOOTS) {
-            e.getPlayer().removePotionEffect(PotionEffectType.JUMP);
         }
     }
 }
