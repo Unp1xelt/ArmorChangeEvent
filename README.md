@@ -24,8 +24,7 @@ The events handle when a player
 
 ## Caution
 
-I've tested this code only on the 1.16.5 version. It could be that some things 
-changed in newer versions. <br>
+It could be that some things changed in newer versions. <br>
 As said before if you find bugs please report them. Thank you!
 
 
