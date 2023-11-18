@@ -157,8 +157,12 @@ class ArmorListener implements Listener {
                 }
 
                 if (!clicked.getType().isAir()) {
-                    // If item amount is more than one and item is halved it is not FULLY unequipped.
-                    if (e.isRightClick() && clicked.getAmount() > 1) return;
+                    if (clicked.getAmount() > 1) {
+                        // Check if the item is halved. In Creative 'holding' (e.getCursor()) has the result of the
+                        // event, so we use it to check.
+                        if (e.getClick() == ClickType.CREATIVE && (holding.getAmount() > 1 || (clicked.getAmount() == 2 && holding.isSimilar(clicked)))) return;
+                        else if (holding.getType().isAir() && e.isRightClick()) return;
+                    }
                     callUnequip(p, clicked, armorSlot, ArmorAction.CLICK).updateCancellable(e);
                 }
                 if (holdingEquipment == armorSlot) {
